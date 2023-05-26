@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.myapplication.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_inf"
+            app:destination="@id/nav_inf" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_ind"
+            app:destination="@id/nav_ind" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_profile"
+            app:destination="@id/nav_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_inf"
+        android:name="com.example.myapplication.ui.information.InformationFragment"
+        android:label="@string/menu_inf"
+        tools:layout="@layout/fragment_information" >
+        <action
+            android:id="@+id/action_nav_inf_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_inf_to_nav_profile"
+            app:destination="@id/nav_profile" />
+        <action
+            android:id="@+id/action_nav_inf_to_nav_ind"
+            app:destination="@id/nav_ind" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.myapplication.ui.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_nav_profile_to_nav_inf"
+            app:destination="@id/nav_inf" />
+        <action
+            android:id="@+id/action_nav_profile_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_profile_to_nav_ind"
+            app:destination="@id/nav_ind" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_ind"
+        android:name="com.example.myapplication.ui.ind.IndFragment"
+        android:label="@string/menu_indicator"
+        tools:layout="@layout/fragment_ind" >
+        <action
+            android:id="@+id/action_nav_ind_to_nav_profile"
+            app:destination="@id/nav_profile" />
+        <action
+            android:id="@+id/action_nav_ind_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_ind_to_nav_inf"
+            app:destination="@id/nav_inf" />
+    </fragment>
+</navigation>
